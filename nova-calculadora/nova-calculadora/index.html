@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10111b">
+  <meta name="description" content="NOVA — uma calculadora online moderna, rápida e responsiva.">
+  <title>NOVA — Calculadora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="NOVA início">
+        <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+        <span>NOVA</span>
+      </a>
+      <div class="top-actions">
+        <span class="live-dot"></span><span class="status-label">PRONTA PARA CALCULAR</span>
+        <button class="icon-button" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">☼</button>
+      </div>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">SIMPLES. PRECISA. SUA.</p>
+      <h1>Faça as contas.<br><span>Sem complicação.</span></h1>
+      <p class="subtitle">Uma calculadora feita para acompanhar seu ritmo.</p>
+    </section>
+
+    <section class="calculator-layout" aria-label="Calculadora">
+      <div class="calculator card">
+        <div class="display">
+          <div class="display-meta"><span>RESULTADO</span><span id="mode-label">PADRÃO</span></div>
+          <div class="expression" id="expression" aria-live="polite">0</div>
+          <div class="result" id="result" aria-live="polite">0</div>
+        </div>
+        <div class="keypad" id="keypad">
+          <button class="key utility" data-action="clear">AC</button>
+          <button class="key utility" data-action="sign">±</button>
+          <button class="key utility" data-action="percent">%</button>
+          <button class="key operator" data-value="÷">÷</button>
+
+          <button class="key" data-value="7">7</button>
+          <button class="key" data-value="8">8</button>
+          <button class="key" data-value="9">9</button>
+          <button class="key operator" data-value="×">×</button>
+
+          <button class="key" data-value="4">4</button>
+          <button class="key" data-value="5">5</button>
+          <button class="key" data-value="6">6</button>
+          <button class="key operator" data-value="−">−</button>
+
+          <button class="key" data-value="1">1</button>
+          <button class="key" data-value="2">2</button>
+          <button class="key" data-value="3">3</button>
+          <button class="key operator" data-value="+">+</button>
+
+          <button class="key utility" data-action="backspace" aria-label="Apagar último dígito">⌫</button>
+          <button class="key" data-value="0">0</button>
+          <button class="key" data-action="decimal">,</button>
+          <button class="key equals" data-action="equals" aria-label="Calcular resultado">=</button>
+        </div>
+        <footer class="calc-footer"><span><kbd>Enter</kbd> calcular</span><span><kbd>Esc</kbd> limpar</span></footer>
+      </div>
+
+      <aside class="side-panel">
+        <section class="history-card card">
+          <div class="panel-heading">
+            <div><p class="eyebrow">SUAS CONTAS</p><h2>Histórico</h2></div>
+            <button class="text-button" id="clear-history">Limpar</button>
+          </div>
+          <div id="history-list" class="history-list">
+            <div class="empty-state"><span class="empty-icon">↗</span><p>Suas contas recentes<br>aparecerão aqui.</p></div>
+          </div>
+        </section>
+        <section class="tip-card">
+          <div class="tip-icon">✳</div>
+          <div><p class="tip-title">Um atalho para você</p><p class="tip-text">Use o teclado do computador para calcular ainda mais rápido.</p></div>
+        </section>
+      </aside>
+    </section>
+    <footer class="page-footer"><span>© 2026 NOVA CALCULADORA</span><span>FEITA PARA FACILITAR ✦</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
